@@ -1,5 +1,8 @@
 import os
-from flask import Flask
+# from flask import Flask
+from flask import Flask, request  # The reason for adding request is to specify that you want to import a specific submodule of Flask,
+# which will help avoid the indirect import of url_quote. This adjustment should resolve the ImportError related to url_quote.
+
 import mysql.connector
 
 
@@ -49,5 +52,3 @@ def listBlog():
 
 if __name__ == '__main__':
     server.run()
-hello.py
-2 KB
